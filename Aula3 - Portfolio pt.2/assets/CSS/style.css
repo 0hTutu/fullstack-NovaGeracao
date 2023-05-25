@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,500&display=swap');
+
+:root {
+    --color-light-50: #f8fafc;
+
+    --color-dark-50: #797984;
+    --color-dark-100: #312d37;
+    --color-dark-900: #000;
+
+    --color-purple-50: #7c3aed;
+    --color-purple-100: #a855f7;
+    --color-purple-200: #bf46ef;
+
+    --color-gradient: linear-gradient(180deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200)); 
+}
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background: var(--color-gradient);
+    color: #ffffff;  
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: #2f2335;
+    text-decoration: none;
+}
+
+.all {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all__conteudo {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.all__conteudo__titulo {
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.destaquecinza {
+    color: #2f2335;
+}
+
+.all__conteudo__texto {
+    font-size: 23.5 px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.all__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 29px;
+    align-items: center;
+}
+
+.all__links__link {
+    /* background-color: #F5EAFE; */
+    display: flex;
+    justify-content: center;
+    gap: 20 px;
+    width: 378px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 22px;
+    padding: 20.5px 0px;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    border: 2px solid #2f2335;
+    
+}
+
+.img {
+    display: flex;
+    border-radius: 85px;
+    width: 280px;   
+}
+
+.all__links__subtitulo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #ffff;
+}
+
+.img:hover {
+    transform: scale(1.02 );
+}
+
+.all__links__link:hover {
+    transform: scale(1.05);
+    background-color: #2f2335;
+}
+
+.rodape {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: #F6E6FD;
+    color: #312d37;
+    padding: 10px;
+}
+
