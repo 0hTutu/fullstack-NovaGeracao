@@ -11,8 +11,10 @@
     --color-purple-100: #a855f7;
     --color-purple-200: #bf46ef;
 
-    --color-gradient: linear-gradient(180deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200)); 
+    --color-gradient1: linear-gradient(180deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200)); 
+    -color-gradient2: linear-gradient(10deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200)); 
 }
+
 
 * {
 margin: 0;
@@ -22,12 +24,13 @@ padding: 0;
 body {
     /* height: 100vh; */
     box-sizing: border-box;
-    background: var(--color-gradient);
+    background: var(--color-gradient1);
     color: #ffffff;  
 }
 
 .cabecalho {
     padding: 2% 0% 0% 15%;
+    background-color: var(--color-gradient2);
 }
 
 .cabecalho__menu {
@@ -35,12 +38,16 @@ body {
     gap: 80px;
 }
 
-.cabecalho__menu__link {
+.link-cabecalho {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 22px;
     color: #2f2335;
     text-decoration: none;
+}
+
+.link-cabecalho:hover {
+    transform: scale(1.01);
 }
 
 .all {
@@ -57,8 +64,8 @@ body {
     gap: 35px;
 }
 
-.all__conteudo__titulo {
-    font-size: 36px;
+.titulo-principal {
+    font-size: 33px;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
@@ -67,7 +74,7 @@ body {
     color: #2f2335;
 }
 
-.all__conteudo__texto {
+.texto-biografia {
     font-size: 23.5 px;
     font-family: "Montserrat", sans-serif;
 }
@@ -80,7 +87,7 @@ body {
     align-items: center;
 }
 
-.all__links__link {
+.social-media {
     /* background-color: #F5EAFE; */
     display: flex;
     justify-content: center;
@@ -103,18 +110,20 @@ body {
     width: 280px;   
 }
 
-.all__links__subtitulo {
+.links__subtitulo {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     color: #ffff;
 }
 
 .img:hover {
-    transform: scale(1.02 );
+    transition: 0.2s;
+    transform: scale(1.02);
 }
 
-.all__links__link:hover {
-    transform: scale(1.05);
+.social-media:hover {
+    transition: 0.2s;
+    transform: scale(1.03);
     background-color: #2f2335;
 }
 
