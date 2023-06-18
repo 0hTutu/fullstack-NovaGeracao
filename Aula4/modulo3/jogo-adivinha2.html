@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste a sua sorte!</title>
+</head>
+<body>
+    
+    <input type="text">
+    <button>Teste a sua sorte!</button>
+
+
+    <script>
+
+        function sorteia() {
+            return Math.round(Math.random() * 10);
+        }
+
+        function sorteiaNumeros(quantidade){
+            var secrets = [];
+            var numero = 1;
+            while(numero <= quantidade) {
+                var numAleatorio = sorteia();
+                if(numAleatorio !== 0){
+                    var achou = false;
+                    //aqui ele percorre o codigo pra saber se o numero que eu gerei está la dentro
+                    for(var posicao = 0; posicao < secrets.length; posicao++) {
+                        if(secrets[posicao] == numAleatorio) {
+                            achou = true;
+                            break
+                        }
+                    }
+                    //aqui ele testa se achou, se sim ele não coloca esse elementro dentro (só é para colocar se ele não achou)
+                    if(achou == false){
+                    secrets.push(numAleatorio);
+                    }
+
+                    numero++;
+                }
+            
+            }
+
+            return secrets;
+        }
+
+        var secrets = sorteiaNumeros(5);      
+        console.log(secrets);
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verifica(){
+        var achou = false;
+            
+            for(posicao = 0; posicao < secrets.length; posicao++){
+                if(input.value == secrets[posicao]){
+                    achou = true;
+                    alert("você ACERTOU!!!");
+                    break
+                }
+            }
+            
+            if(achou == false){
+                alert("você errou.");   
+            }
+    } 
+        var button = document.querySelector("button");
+        //button.onclick = verifica(); Aqui ele não leva as () para não chamar a função na iniciaçização do codigo.
+        //queremos chamar a função apenas quando executamos o button.onclick, para que o alerta sea exibido apenas na execução do programa.
+        button.onclick = verifica;
+
+    </script>
+</body>
+</html>
