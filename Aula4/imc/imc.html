@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imc simples</title>
+</head>
+<body>
+    
+
+    <script>
+        //função para pular linhas no HTML.
+        function pulalinha(){
+            document.write("<br>");
+        }
+        
+        //funcão para mostrar uma frase.
+        function mostra(frase){
+            document.write(frase);
+            pulalinha();
+        }
+
+        //variaveis para armazenar o peso, altura e nome do usuario.
+        let nome = prompt("insira seu nome.")
+        let peso = prompt("insira seu peso. (em kilos: 60, 75 etc)");
+        let altura = prompt("insira sua altura. (em metros: 1.55, 1.75 etc)");
+
+        //função para calcular o imc (não armazena o valor).
+        function calculaimc(altura, peso){
+            return peso / (altura**2);
+        }
+
+        //variavel para armazenar o valor do imc.
+        let imc = calculaimc(altura, peso);
+
+        //exibe na tela do usuario o seu respectivo imc com seu nome.
+        mostra( nome + " seu imc é: " + imc);
+
+    </script>
+</body>
+</html>
