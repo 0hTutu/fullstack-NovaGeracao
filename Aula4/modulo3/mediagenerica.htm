@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de numeros</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        function exibe(frase){
+            document.write(frase);
+            document.write("<br><br>");
+        }
+
+        let quantidadeTotal = parseInt(prompt("Entre com o total de numeros para fazer uma média."));
+
+        let i = 1;
+        while(i <= quantidadeTotal){
+            var totaln = 0;
+            var n = parseInt(prompt("Entre com o valor."));
+            totaln += n;
+            i++
+        }
+
+        mediadosnumeros = totaln/quantidadeTotal;
+        exibe("a media dos numeros é " + mediadosnumeros);
+
+    </script>
+</body>
+</html>
