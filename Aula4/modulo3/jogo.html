@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>    
+
+    document.write("<h2>Advinhe o numero!</h2> <br>")
+    let numerosorteado = Math.round(Math.random() * 10);
+    let numerousuario = parseInt(prompt("Insira seu numero"));
+
+    function sorteio() {
+
+        if(numerousuario == numerosorteado){
+            document.write("você acertou!");
+        } else {
+            document.write("você errou. o numero sorteado foi: " + numerosorteado);
+        }
+
+    }
+
+    sorteio();
+
+//concluido.
+
+</script>
+
+</body>
+</html>
