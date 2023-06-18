@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    function pulalinha(){
+        document.write("<br><br>");
+    }
+
+    function exibe(frase){
+        document.write(frase);
+    }
+
+    //primeiro loop para determinar a quantidade de linhas
+    for(linha = 1; linha <= 10; linha++){
+        //seundo loop para determinar a quantidade de caracteries na linha
+        for(colunha = 1; coluna <= 10; coluna++){
+            exibe("*");
+        }
+        //o codigo não vai pular as linhas automaticamente, então adicionamos um pulalinha para dar o devido espaçamento entre as linhas
+        pulalinha();
+    }
+
+    </script>
+</body>
+</html>
