@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text">
+    <button>Teste a sua sorte!</button>
+
+
+    <script>
+
+        var secret = 4;
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verifica(){
+
+            if(input.value == secret){
+                alert("você ACERTOU!!!");
+            } else { 
+                alert("você errou.");
+            }
+            input.value = "";
+            input.focus();
+        }
+
+        var button = document.querySelector("button");
+        //button.onclick = verifica(); Aqui ele não leva as () para não chamar a função na iniciaçização do codigo.
+        //queremos chamar a função apenas quando executamos o button.onclick, para que o alerta sea exibido apenas na execução do programa.
+        button.onclick = verifica;
+
+    </script>
+</body>
+</html>
