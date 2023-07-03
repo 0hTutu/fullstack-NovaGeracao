@@ -1,15 +1,17 @@
 const cliente = {
-    nome = "José",
-    idade = 24,
-    email = "josesilva@firma.com",
-    telefone = ["51 99232307","51 99132340" ]
+    nome: "José",
+    idade: 24,
+    email: "josesilva@firma.com",
+    telefone: ["51 99232307","51 99132340" ]
 };
 
-cliente.endereco = {
-    rua = " Av. Franlin Roosevelt",
-    numero = "732",
-    ap = false,
-    complemento = "Casa verde"
-};
+cliente.enderecos = [
+    {
+      rua: " Av. Franlin Roosevelt",
+      numero: "732",
+      ap: false,
+      complemento: "Casa verde"
+    }
+];
 
 console.log(cliente.endereco);
